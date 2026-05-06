@@ -22,7 +22,7 @@ import {
     sin,
     sqrt,
     wrapRadians,
-} from "./main"
+} from "./index"
 
 export function testIntegerAndFloatAbs(): void {
     Assert.equal(abs(-7), 7)
