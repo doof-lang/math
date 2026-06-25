@@ -2,6 +2,11 @@
 
 Common mathematical constants and lightweight wrappers around the C++ `<cmath>` functions. Provides type-generic imports for Doof numeric types plus a few small helpers like unit conversions, linear interpolation, and angle normalization.
 
+## Documentation
+
+- [Guide and API reference](docs/API.md) groups constants, numeric helpers, trigonometry, classification, and angle utilities.
+- Tests can be run with `doof test math`.
+
 ## Usage
 
 ```doof
