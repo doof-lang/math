@@ -1,6 +1,6 @@
-export const PI = 3.141592653589793
-export const TAU = 6.283185307179586
-export const E = 2.718281828459045
+export readonly PI = 3.141592653589793
+export readonly TAU = 6.283185307179586
+export readonly E = 2.718281828459045
 
 export import function abs<T: int | long | float | double>(x: T): T from "<cmath>" as std::abs
 export import function min<T: int | long | float | double>(a: T, b: T): T from "<algorithm>" as std::min
