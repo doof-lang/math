@@ -24,125 +24,125 @@ import {
     wrapRadians,
 } from "./index"
 
-export function testIntegerAndFloatAbs(): void {
+export function testIntegerAndFloatAbs(): none {
     Assert.equal(abs(-7), 7)
     Assert.isTrue(approxEqual(abs(-3.25), 3.25))
 }
 
-export function testClampMinAndMax(): void {
+export function testClampMinAndMax(): none {
     Assert.equal(min(4, 9), 4)
     Assert.equal(max(4, 9), 9)
     Assert.equal(clamp(15, 0, 10), 10)
     Assert.equal(clamp(-3, 0, 10), 0)
 }
 
-export function testTrigAndRoots(): void {
+export function testTrigAndRoots(): none {
     Assert.isTrue(approxEqual(cos(0.0), 1.0))
     Assert.isTrue(approxEqual(sin(PI / 2.0), 1.0))
     Assert.isTrue(approxEqual(sqrt(9.0), 3.0))
     Assert.isTrue(approxEqual(pow(3.0, 2.0), 9.0))
 }
 
-export function testAngleHelpers(): void {
+export function testAngleHelpers(): none {
     sixty := radians(60.0)
     Assert.isTrue(approxEqual(degrees(sixty), 60.0))
     Assert.isTrue(approxEqual(wrapRadians(3.5), -2.783185307179586))
 }
 
-export function testConvenienceHelpers(): void {
+export function testConvenienceHelpers(): none {
     Assert.isTrue(approxEqual(lerp(10.0, 20.0, 0.25), 12.5))
     Assert.isTrue(approxEqual(floor(3.9), 3.0))
     Assert.isTrue(approxEqual(round(3.6), 4.0))
 }
 
-export function testHypotBasic(): void {
+export function testHypotBasic(): none {
     Assert.isTrue(approxEqual(hypot(3.0, 4.0), 5.0))
 }
 
-export function testHypotFloat(): void {
+export function testHypotFloat(): none {
     Assert.isTrue(approxEqual(hypot(3.0f, 4.0f), 5.0f))
 }
 
-export function testHypotZero(): void {
+export function testHypotZero(): none {
     Assert.isTrue(approxEqual(hypot(0.0, 0.0), 0.0))
 }
 
-export function testHypotSymmetric(): void {
+export function testHypotSymmetric(): none {
     Assert.isTrue(approxEqual(hypot(3.0, 4.0), hypot(4.0, 3.0)))
 }
 
-export function testLog2PowersOfTwo(): void {
+export function testLog2PowersOfTwo(): none {
     Assert.isTrue(approxEqual(log2(1.0), 0.0))
     Assert.isTrue(approxEqual(log2(2.0), 1.0))
     Assert.isTrue(approxEqual(log2(8.0), 3.0))
     Assert.isTrue(approxEqual(log2(1024.0), 10.0))
 }
 
-export function testLog2Float(): void {
+export function testLog2Float(): none {
     Assert.isTrue(approxEqual(log2(8.0f), 3.0f))
 }
 
-export function testIsnanWithNan(): void {
+export function testIsnanWithNan(): none {
     Assert.isTrue(isnan(0.0 / 0.0))
 }
 
-export function testIsnanWithNanFloat(): void {
+export function testIsnanWithNanFloat(): none {
     Assert.isTrue(isnan(0.0f / 0.0f))
 }
 
-export function testIsnanWithNormal(): void {
+export function testIsnanWithNormal(): none {
     Assert.isFalse(isnan(1.0))
     Assert.isFalse(isnan(-1.0))
     Assert.isFalse(isnan(0.0))
 }
 
-export function testIsnanSqrtNegative(): void {
+export function testIsnanSqrtNegative(): none {
     Assert.isTrue(isnan(sqrt(-1.0)))
 }
 
-export function testIsnanLogNegative(): void {
+export function testIsnanLogNegative(): none {
     Assert.isTrue(isnan(log(-1.0)))
 }
 
-export function testIsinfWithInf(): void {
+export function testIsinfWithInf(): none {
     Assert.isTrue(isinf(1.0 / 0.0))
     Assert.isTrue(isinf(-1.0 / 0.0))
 }
 
-export function testIsinfWithInfFloat(): void {
+export function testIsinfWithInfFloat(): none {
     Assert.isTrue(isinf(1.0f / 0.0f))
 }
 
-export function testIsinfWithNormal(): void {
+export function testIsinfWithNormal(): none {
     Assert.isFalse(isinf(1.0))
     Assert.isFalse(isinf(0.0))
 }
 
-export function testIsinfWithNan(): void {
+export function testIsinfWithNan(): none {
     Assert.isFalse(isinf(0.0 / 0.0))
 }
 
-export function testIsfiniteWithNormal(): void {
+export function testIsfiniteWithNormal(): none {
     Assert.isTrue(isfinite(1.0))
     Assert.isTrue(isfinite(-1.0))
     Assert.isTrue(isfinite(0.0))
 }
 
-export function testIsfiniteWithInf(): void {
+export function testIsfiniteWithInf(): none {
     Assert.isFalse(isfinite(1.0 / 0.0))
     Assert.isFalse(isfinite(-1.0 / 0.0))
 }
 
-export function testIsfiniteWithNan(): void {
+export function testIsfiniteWithNan(): none {
     Assert.isFalse(isfinite(0.0 / 0.0))
 }
 
-export function testIsfiniteFloat(): void {
+export function testIsfiniteFloat(): none {
     Assert.isTrue(isfinite(1.0f))
     Assert.isFalse(isfinite(1.0f / 0.0f))
 }
 
-export function testMutualExclusion(): void {
+export function testMutualExclusion(): none {
     let nan = 0.0 / 0.0
     let inf = 1.0 / 0.0
     let normal = 1.0
